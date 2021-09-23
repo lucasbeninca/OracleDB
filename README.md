@@ -50,6 +50,14 @@ Tipos de String — **LONGVARCHAR, CHAR, VARCHAR**
           INSERT INTO tabela_de_vendedores
           (matricula,nome,percentual_comissao)
           VALUES('00233','José Geraldo da Fonseca',0.10);
+          
+          
+- Inserindo campo do tipo DATA:
+
+          INSERT INTO tabela_de_vendedores
+          (matricula,nome,percentual_comissao, data_nascimento)
+          VALUES('00233','José Geraldo da Fonseca',0.10, to_date('01/01/1993','DD/MM/YYYY'));
+          OBS: O TO_DATE permite nos formatar como a data sera salva;
 
 **UPDATE**
 
