@@ -61,4 +61,13 @@ Tipos de String — **LONGVARCHAR, CHAR, VARCHAR**
            
             DELETE from tb_produtos where produto = '1078680';
             
+**ALTER TABLE**
+               
+            ALTER TABLE TB_PRODUTOS ADD CONSTRAINT PK_TB_PRODUTOS 
+            PRIMARY KEY (PRODUTO);
+            
+           
+            
+    
+            
 
