@@ -64,7 +64,9 @@ Tipos de String — **LONGVARCHAR, CHAR, VARCHAR**
 **ALTER TABLE**
                
             ALTER TABLE TB_PRODUTOS ADD CONSTRAINT PK_TB_PRODUTOS 
-            PRIMARY KEY (PRODUTO);
+            PRIMARY KEY (PRODUTO); (OBS: Adiciona uma chave primária).
+            
+            ALTER TABLE TB_PRODUTOS ADD nome_coluna date; (OBS: adiciona uma coluna).
             
            
             
