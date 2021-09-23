@@ -1,7 +1,10 @@
 # OracleDB
 
+
+
 **CREATE**
--
+
+          CREATE TABLE tabela_de_vendedores;
 
 **INSERT**
 
