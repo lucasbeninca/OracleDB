@@ -83,5 +83,15 @@ Tipos de String — **LONGVARCHAR, CHAR, VARCHAR**
           SEXO,LIMITE_CREDITO,VOLUME_COMPRA,PRIMEIRA_COMPRA FROM TB_CLIENTES;
            
  Neste exemplo a coluna CPF sera representada como CPF_DO_CLIENTE, assim como a coluna NOME sera representada como NOME_DO_CLIENTE.
+ 
+ **UTILIZANDO SELECT E OPERADORES LÓGICOS**
+
+          SELECT * FROM tb_clientes WHERE preco_lista > 10; // operador > MAIOR QUE trás tudo que for maior que 10.
+          SELECT * FROM tb_clientes WHERE preco_lista < 10; // operador < MENOR QUE trás tudo que for Menor que 10.
+          SELECT * FROM tb_clientes WHERE preco_lista >= 10; // operador >= MAIOR IGUAL QUE trás tudo que for MAIOR E IGUAL a 10.
+          SELECT * FROM tb_clientes WHERE preco_lista <= 10; // operador <= MENOR IGUAL QUE trás tudo que for MENOR E IGUAL que 10.
+          SELECT * FROM tb_clientes WHERE preco_lista <> 10; // operador <> DIFERENTE QUE 10 trás tudo que for diferente que 10.
+                
+O OracleDB não consegue usar os operadores como = <> ou >=, <= para campos do tipo FLOAT, necessário utilizar o BETWEEN: select * from nome_tablea where preco_lista BETWEEN 10 AND 12; retorna os valores entre 10 e 12, assim podemos listar campos de ponto flutuante.
             
 
