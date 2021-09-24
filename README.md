@@ -84,7 +84,7 @@ Tipos de String — **LONGVARCHAR, CHAR, VARCHAR**
            
  Neste exemplo a coluna CPF sera representada como CPF_DO_CLIENTE, assim como a coluna NOME sera representada como NOME_DO_CLIENTE.
  
- **UTILIZANDO SELECT E OPERADORES LÓGICOS**
+ **UTILIZANDO SELECT E OPERADORES LÓGICOS :** >, <, >=, <=, <> e BETWEEN.
 
           SELECT * FROM tb_clientes WHERE preco_lista > 10; // operador > MAIOR QUE trás tudo que for maior que 10.
           SELECT * FROM tb_clientes WHERE preco_lista < 10; // operador < MENOR QUE trás tudo que for Menor que 10.
