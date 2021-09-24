@@ -76,6 +76,11 @@ Tipos de String — **LONGVARCHAR, CHAR, VARCHAR**
             
             ALTER TABLE TB_PRODUTOS ADD nome_coluna date; (OBS: adiciona uma coluna).
             
+**CRIANDO UM ALIAS NO SELECT**
+- Quando realizamos um SELECT, podemos dizer para o OracleDB com qual nome queremos que a coluna seja listada, isto é feito colocando o AS depois do nome do campo e após o AS dizendo como está coluna sera representada, exemplo:
+
+          SELECT CPF AS CPF_DO_CLIENTE, NOME AS NOME_DO_CLIENTE,ENDERECO1,ENDERECO2,BAIRRO,CIDADE,ESTADO,CEP,DATA_NASCIMENTO,IDADE,
+          SEXO,LIMITE_CREDITO,VOLUME_COMPRA,PRIMEIRA_COMPRA FROM TB_CLIENTES;
            
             
     
