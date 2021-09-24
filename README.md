@@ -82,7 +82,6 @@ Tipos de String — **LONGVARCHAR, CHAR, VARCHAR**
           SELECT CPF AS CPF_DO_CLIENTE, NOME AS NOME_DO_CLIENTE,ENDERECO1,ENDERECO2,BAIRRO,CIDADE,ESTADO,CEP,DATA_NASCIMENTO,IDADE,
           SEXO,LIMITE_CREDITO,VOLUME_COMPRA,PRIMEIRA_COMPRA FROM TB_CLIENTES;
            
-            
-    
+ Neste exemplo a coluna CPF sera representada como CPF_DO_CLIENTE, assim como a coluna NOME sera representada como NOME_DO_CLIENTE.
             
 
