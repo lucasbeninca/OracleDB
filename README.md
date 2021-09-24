@@ -76,8 +76,31 @@ Tipos de String — **LONGVARCHAR, CHAR, VARCHAR**
             
             ALTER TABLE TB_PRODUTOS ADD nome_coluna date; (OBS: adiciona uma coluna).
             
+**CRIANDO UM ALIAS NO SELECT**
+- Quando realizamos um SELECT, podemos dizer para o OracleDB com qual nome queremos que a coluna seja listada, isto é feito colocando o AS depois do nome do campo e após o AS dizendo como está coluna sera representada, exemplo:
+
+          SELECT CPF AS CPF_DO_CLIENTE, NOME AS NOME_DO_CLIENTE,ENDERECO1,ENDERECO2,BAIRRO,CIDADE,ESTADO,CEP,DATA_NASCIMENTO,IDADE,
+          SEXO,LIMITE_CREDITO,VOLUME_COMPRA,PRIMEIRA_COMPRA FROM TB_CLIENTES;
            
-            
-    
+ Neste exemplo a coluna CPF sera representada como CPF_DO_CLIENTE, assim como a coluna NOME sera representada como NOME_DO_CLIENTE.
+ 
+ **UTILIZANDO SELECT E OPERADORES LÓGICOS :** >, <, >=, <=, <> e BETWEEN.
+
+          SELECT * FROM tb_clientes WHERE preco_lista > 10; // operador > MAIOR QUE trás tudo que for maior que 10.
+          SELECT * FROM tb_clientes WHERE preco_lista < 10; // operador < MENOR QUE trás tudo que for Menor que 10.
+          SELECT * FROM tb_clientes WHERE preco_lista >= 10; // operador >= MAIOR IGUAL QUE trás tudo que for MAIOR E IGUAL a 10.
+          SELECT * FROM tb_clientes WHERE preco_lista <= 10; // operador <= MENOR IGUAL QUE trás tudo que for MENOR E IGUAL que 10.
+          SELECT * FROM tb_clientes WHERE preco_lista <> 10; // operador <> DIFERENTE QUE 10 trás tudo que for diferente que 10.
+                
+O OracleDB não consegue usar os operadores como = <> ou >=, <= para campos do tipo FLOAT, necessário utilizar o BETWEEN: select * from nome_tablea where preco_lista BETWEEN 10 AND 12; retorna os valores entre 10 e 12, assim podemos listar campos de ponto flutuante.
+
+- Podemos utilizar os operadores lógicos vistos acima com campos do tipo DATA lembrando de utilizar o TO_DATE e quando necessário o TO_CHAR, para consultar datas especificas, exemplo
+
+          SELECT * FROM tb_clientes WHERE data_nascimento = TO_DATE('01/01/1995','DD/MM/YYYY');
+
+          SELECT * FROM tb_clientes WHERE TO_CHAR(DATA_NASCIMENTO,'MM') = 10; 
+          
+ Essa consulta me retornara todos os clientes que nasceram no mês 10.
+
             
 
