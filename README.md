@@ -94,7 +94,7 @@ Tipos de String — **LONGVARCHAR, CHAR, VARCHAR**
                 
 O OracleDB não consegue usar os operadores como = <> ou >=, <= para campos do tipo FLOAT, necessário utilizar o BETWEEN: select * from nome_tablea where preco_lista BETWEEN 10 AND 12; retorna os valores entre 10 e 12, assim podemos listar campos de ponto flutuante.
 
-- Podemos utilizar os operadores lógicos vistos acima com campos do tipo data lembrando de utilizar o TO_DATE e quando necessário o TO_CHAR, para consultar datas especificas, exemplo
+- Podemos utilizar os operadores lógicos vistos acima com campos do tipo DATA lembrando de utilizar o TO_DATE e quando necessário o TO_CHAR, para consultar datas especificas, exemplo
 
           SELECT * FROM tb_clientes WHERE data_nascimento = TO_DATE('01/01/1995','DD/MM/YYYY');
 
